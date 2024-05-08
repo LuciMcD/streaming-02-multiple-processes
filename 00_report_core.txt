@@ -1,0 +1,25 @@
+
+======================================================================
+======================================================================
+ Welcome to NW Diagnostics!
+ At: 2024-05-05 at 11:57 AM
+ Operating System: nt Windows 10
+ System Architecture: 64bit
+ Number of CPUs: 12
+ Machine Type: AMD64
+ Python Version: 3.11.4
+ Python Build Date and Compiler: tags/v3.11.4:d2340ef with Jun  7 2023 05:45:37
+ Python Implementation: CPython
+ Active pip environment: None
+ Path to Interpreter:         C:\Users\lucim\AppData\Local\Programs\Python\Python311\python.exe
+ Path to virtual environment: C:\Users\lucim\AppData\Local\Programs\Python\Python311
+ Current Working Directory:   C:\Users\lucim\Streaming Data\streaming-02-multiple-processes
+ Path to source directory:    C:\Users\lucim\Streaming Data\streaming-02-multiple-processes
+ Path to script file:         C:\Users\lucim\Streaming Data\streaming-02-multiple-processes\00_check_core.py
+ User's Home Directory:       C:\Users\lucim
+ Terminal Environment:        VS Code
+ Terminal Type:               cmd.exe
+ Git available in PATH:       True 
+======================================================================
+======================================================================
+

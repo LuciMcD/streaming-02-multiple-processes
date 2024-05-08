@@ -1,7 +1,8 @@
 # streaming-02-multiple-processes
 
 > Multiple processes accessing a shared resource concurrently
-
+### Student: Luci McDaniel
+GitHub Profile: https://github.com/LuciMcD 
 ## Overview
 
 This example starts a shared database and multiple processes.
