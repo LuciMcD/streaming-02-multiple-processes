@@ -192,6 +192,6 @@ if __name__ == "__main__":
     p3.join()
     
     # if the task duration is 0, then show the success message
-    if TASK_DURATION_SECONDS == 0:
+    if TASK_DURATION_SECONDS == 3:
         logging.info(SUCCESS_MESSAGE)
    

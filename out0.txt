@@ -5,3 +5,32 @@ This will clear the console output.
 Run the file once while the tasks are short. 
 
 Copy and paste the terminal results (when task_duration is 0) here.
+
+Results:
+
+PS C:\Users\lucim\Streaming Data\streaming-02-multiple-processes> py multiple_processes.py
+2024-05-10 09:53:49,313 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2024-05-10 at 09:53 AM
+  Operating System: nt Windows 10
+  Python Version:   3.11.4
+  Path to Interpreter:  C:\Users\lucim\AppData\Local\Programs\Python\Python311\python.exe
+======================================================================
+
+2024-05-10 09:53:49,313 - INFO - Called recreate_database().
+2024-05-10 09:53:49,313 - INFO - Called drop_table().
+2024-05-10 09:53:49,323 - INFO - Table 'pets' dropped successfully.
+2024-05-10 09:53:49,324 - INFO - Called create_table().
+2024-05-10 09:53:49,334 - INFO - Table 'pets' created successfully.
+2024-05-10 09:53:49,503 - INFO - Called process_three().
+2024-05-10 09:53:49,503 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2024-05-10 09:53:49,504 - INFO - Called process_one().
+2024-05-10 09:53:49,505 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2024-05-10 09:53:49,506 - INFO - Called process_two().
+2024-05-10 09:53:49,506 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2024-05-10 09:53:52,533 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2024-05-10 09:53:55,087 - ERROR - ERROR while P2 inserting pet Cooper: database is locked
+2024-05-10 09:53:55,088 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+2024-05-10 09:53:55,103 - ERROR - ERROR while P1 inserting pet Ace: database is locked
+2024-05-10 09:53:55,105 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.

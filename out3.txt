@@ -5,3 +5,43 @@ This will clear the console output.
 Run the file once while the tasks are longer. 
 
 Copy and paste the terminal results (when task_duration is 3) here.
+
+Results:
+
+
+PS C:\Users\lucim\Streaming Data\streaming-02-multiple-processes> py multiple_processes.py
+2024-05-10 09:55:27,374 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2024-05-10 at 09:55 AM
+  Operating System: nt Windows 10
+  Python Version:   3.11.4
+  Path to Interpreter:  C:\Users\lucim\AppData\Local\Programs\Python\Python311\python.exe
+======================================================================
+
+2024-05-10 09:55:27,375 - INFO - Called recreate_database().
+2024-05-10 09:55:27,375 - INFO - Called drop_table().
+2024-05-10 09:55:27,388 - INFO - Table 'pets' dropped successfully.
+2024-05-10 09:55:27,389 - INFO - Called create_table().
+2024-05-10 09:55:27,406 - INFO - Table 'pets' created successfully.
+2024-05-10 09:55:27,540 - INFO - Called process_one().
+2024-05-10 09:55:27,542 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2024-05-10 09:55:27,541 - INFO - Called process_two().
+2024-05-10 09:55:27,548 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2024-05-10 09:55:27,552 - INFO - Called process_three().
+2024-05-10 09:55:27,552 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2024-05-10 09:55:30,575 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2024-05-10 09:55:33,094 - ERROR - ERROR while P3 inserting pet Emma: database is locked
+2024-05-10 09:55:33,095 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2024-05-10 09:55:33,112 - ERROR - ERROR while P2 inserting pet Cooper: database is locked
+2024-05-10 09:55:33,114 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+2024-05-10 09:55:39,805 - INFO - 
+SUCCESS: All processes successfully completed!
+
+Now - increase the task duration (representing
+      the time the task has the database
+      tied up during an insert statement).
+How well do multiple, concurrent processes share a database
+    when each task takes more time?
+How can multiple processes share a resource
+    without interfering with each other?
