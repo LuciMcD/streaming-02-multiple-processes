@@ -121,13 +121,14 @@ and share them in our discussion.
 Python has pretty helpful error messages. 
 When you get an error, read them carefully. 
 
-- What error do you get?
+- What error do you get? Error received: "2024-05-10 09:55:33,094 - ERROR - ERROR while P3 inserting pet Emma: database is locked"
 
 ### Database Is Locked Error
 
 Do a web search on the sqlite3 'database is locked' error.
 
-- What do you learn?
+- What do you learn? 
+The "database is locked" error occurs when another connection is already accessing the database. 
 - Once a process fails, it crashes the main process and everything stops. 
 
 ### Deadlock
@@ -141,3 +142,11 @@ with no process able to move forward and make progress.
 ### Learn More
 
 Check out Wikipedia's article on deadlock and other sources to learn how to prevent and avoid locking issues in concurrent processes. 
+
+### Steps to help resolve deadlock
+
+1. check for hung processes
+2. look for crashed session
+3. verify database integrity
+4. backup and remove the database
+5. increase the timeout parameter 
