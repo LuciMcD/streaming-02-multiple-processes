@@ -71,7 +71,7 @@ def process_rows(input_file_name, output_file_name):
 
         # Create a file object for output (w = write access)
         # Set the newline parameter to an empty string to avoid extra newlines in the output file
-        with open(output_file_name, "w", newline="") as output_file:
+        with open(output_file_name, "w", newline="", encoding="utf-8") as output_file:
             logging.info(f"Opened for writing: {output_file_name}.")
 
             # Create a CSV writer object
@@ -82,7 +82,7 @@ def process_rows(input_file_name, output_file_name):
 
             for row in reader:
                 time, latitude, longitude, depth, mag, magType, nst, gap, dmin, rms, net, id, updated, place, type, horizontalError, depthError, magError, magNst, status, locationSource, magSource = row
-                writer.writerow({time, latitude, longitude, depth, mag, magType, nst, gap, dmin, rms, net, id, updated, place, type, horizontalError, depthError, magError, magNst, status, locationSource, magSource}) 
+                writer.writerow([time, latitude, longitude, depth, mag, magType, nst, gap, dmin, rms, net, id, updated, place, type, horizontalError, depthError, magError, magNst, status, locationSource, magSource]) 
 
 
 def stream_row(input_file_name, address_tuple):
